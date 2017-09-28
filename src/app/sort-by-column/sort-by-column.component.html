@@ -2,12 +2,18 @@
   <thead>
     <tr>
       
-      <th>Name</th>
-      <th>Category</th>
-      <th>amount</th>
+      <th (click)="sorting('name')">
+        <button>Name</button>
+      </th>
+      <th (click)="sorting('category')">
+        <button>Category</button>
+      </th>
+      <th (click)="sorting('amount')">
+        <button>Amount</button>
+      </th>
     </tr>
   </thead>
-    <tbody *ngFor="let element of dataArray; let rowIndex = index">
+  <tbody *ngFor="let element of dataArray; let rowIndex = index">
     <tr>
       <td>{{element.name}}</td>
       <td>{{element.category}}</td>
