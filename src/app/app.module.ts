@@ -7,11 +7,13 @@ import {rootRouterConfig} from './app.routes';
 import { AppComponent } from './app.component';
 import {SortByColumnComponent } from './sort-by-column/sort-by-column.component';
 import { DataService} from './services/data.service';
+import { SortByCategoryComponent } from './sort-by-category/sort-by-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SortByColumnComponent
+    SortByColumnComponent,
+    SortByCategoryComponent
   ],
   imports: [
     BrowserModule,

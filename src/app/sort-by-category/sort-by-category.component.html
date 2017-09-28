@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      
+      <th (click)="sorting('name')">
+        <button>Name</button>
+      </th>
+      <th (click)="sorting('C1')">
+        <button>C1</button>
+      </th>
+      <th (click)="sorting('C2')">
+        <button>C2</button>
+      </th>
+      <th (click)="sorting('C3')">
+        <button>C3</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let element of desiredArr; let rowIndex = index">
+    <tr>
+      <!--<th scope="row"> {{rowIndex+1} </th> -->
+      <td>{{element.name}}</td>
+      <td>{{element.C1}}</td>
+      <td>{{element.C2}}</td>
+      <td>{{element.C3}}</td>
+    </tr>
+  </tbody>
+</table>  
