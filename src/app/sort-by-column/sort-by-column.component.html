@@ -7,9 +7,11 @@
       <th>amount</th>
     </tr>
   </thead>
-  <tbody>
+    <tbody *ngFor="let element of dataArray; let rowIndex = index">
     <tr>
-      
+      <td>{{element.name}}</td>
+      <td>{{element.category}}</td>
+      <td>{{element.amount}}</td>
     </tr>
   </tbody>
 </table>

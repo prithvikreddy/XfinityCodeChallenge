@@ -5,7 +5,8 @@ import { RouterModule } from '@angular/router';
 import {rootRouterConfig} from './app.routes';
 
 import { AppComponent } from './app.component';
-import {SortByColumnComponent } from './sort-by-column/sort-by-column.component'
+import {SortByColumnComponent } from './sort-by-column/sort-by-column.component';
+import { DataService} from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import {SortByColumnComponent } from './sort-by-column/sort-by-column.component'
         RouterModule.forRoot(rootRouterConfig, { useHash: true })
 
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

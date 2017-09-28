@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-sort-by-column',
@@ -8,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class SortByColumnComponent implements OnInit {
     dataArray: Array<any>;
 
-  constructor() { }
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    
+    this.dataService.getJsonData().subscribe(data => {
+      this.dataArray = data;
+    })
   }
 
 }
